@@ -1,0 +1,125 @@
+---
+title: |
+  Adopting open source practices  
+  for better science
+author: Pierce Edmiston
+output:
+  beamer_presentation:
+    theme: metropolis
+---
+
+# Outline
+
+Open source practices that make for more reproducible science:
+
+1. Version control
+2. Dynamic documents
+3. Building from source
+
+Conclusion: It's worth it!
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE, message = FALSE)
+source("presentation.R")
+```
+
+# Why I care about reproducibility
+
+1. I want my research to be reproducible.
+2. I want to attract collaborators.
+
+# Steps toward reproducible science
+
+- Blind data analysts to experimental conditions.
+- Improve statistics education (adapted for web).
+- Hire methodological consultants.
+- Seek collaboration for scalability.
+
+# Why I think open source is the answer
+
+Compare these two goals of reproducibility in science and in open source:
+
+1. Fellow researchers should be able to reproduce my work.  
+2. Anyone should be able to use and contribute to this project.
+
+# Version control
+
+```{r version-control-in-the-wild, fig.width=12}
+grid.arrange(img("undo-button"), img("wiki-revisions"), img("git-log"), nrow = 1)
+```
+
+# Pick your poison
+
+- **git**
+- mercurial
+- subversion
+- gitless
+
+# Tools for climbing
+
+```{r climbing-tools}
+img("climbing-tools", ext = ".jpg", draw = TRUE)
+```
+
+# Conquer clutter
+
+```{r cluttered-folder}
+img("cluttered-folder", draw = TRUE)
+```
+
+# Version control's dirty little secret
+
+(It only really works on plaintext files.)
+
+```{r excel-panic, fig.cap="Excel panic. Well, did you make changes or didn't you??"}
+img("excel-panic", draw = TRUE)
+```
+
+# The good news
+
+Once you're working in plaintext, you can do lots of cool things.
+
+- Full power of VCS (merge, blame, etc).
+- Use free and open source tools (Unix).
+- **Write dynamic documents.**
+
+
+# Dynamic documents
+
+- Philosophy: DRY, Literate Programming
+- Tools: Sphinx, Jupyter, Knitr, Pandoc
+
+
+# Philosophy
+
+Don't Repeat Yourself (DRY)
+: Every piece of knowledge must have a single, unambiguous, authoritative 
+  representation within a system.
+
+Literate programming (LP)
+: Intermingle prose and code for better understanding of the program. The 
+  explanation of a program does not need to resemble the program structure.
+
+# Knitr
+
+**Elegant, flexible and fast dynamic report generation with R.**
+
+    Participants in condition A outperformed participants in
+    condition B, `report_model_results(mod, param = "condition")`.
+
+```{r knitr-side-by-side}
+grid.arrange(img("knitr-source"), img("knitr-output"), nrow = 1)
+```
+
+# Dynamic documents in practice
+
+- Handouts
+- Homework
+- Supplemental materials
+- Conference proceedings
+- Journal papers
+
+# A litmus test for reproducible research
+
+Can you build the published paper without the original data?
