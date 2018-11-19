@@ -22,6 +22,7 @@ Conclusion: It's worth it!
 library(knitr)
 opts_chunk$set(echo = FALSE, message = FALSE)
 source("presentation.R")
+crotchet::read_graphviz_chunk("dot/dynamic-documents.gv")
 ```
 
 # Why I care about reproducibility
@@ -30,6 +31,8 @@ source("presentation.R")
 2. I want to attract collaborators.
 
 # Steps toward reproducible science
+
+A manifesto for reproducible research
 
 - Blind data analysts to experimental conditions.
 - Improve statistics education (adapted for web).
@@ -84,12 +87,15 @@ Once you're working in plaintext, you can do lots of cool things.
 - Use free and open source tools (Unix).
 - **Write dynamic documents.**
 
-
 # Dynamic documents
 
 - Philosophy: DRY, Literate Programming
-- Tools: Sphinx, Jupyter, Knitr, Pandoc
+- Tools: Sphinx, Jupyter, RMarkdown, Knitr, Pandoc
 
+# Dynamic documents
+
+```{r dynamic-documents, engine="dot"}
+```
 
 # Philosophy
 
@@ -105,11 +111,17 @@ Literate programming (LP)
 
 **Elegant, flexible and fast dynamic report generation with R.**
 
-    Participants in condition A outperformed participants in
-    condition B, `report_model_results(mod, param = "condition")`.
+    Participants in condition A outperformed
+    participants in condition B,
+    `report_model_results(mod, param = "condition")`.
 
 ```{r knitr-side-by-side}
 grid.arrange(img("knitr-source"), img("knitr-output"), nrow = 1)
+```
+
+# Dynamic documents
+
+```{r dynamic-documents, engine="dot"}
 ```
 
 # Dynamic documents in practice

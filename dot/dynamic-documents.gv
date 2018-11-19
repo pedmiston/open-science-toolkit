@@ -1,0 +1,15 @@
+digraph {
+  rankdir = LR
+  fontname=helvetica
+  node[fontname=helvetica shape=circle width=1 style=filled]
+  edge[fontname=helvetica]
+  Rmd -> md[label="knitr"]
+  md -> latex[label="pandoc"]
+  latex -> pdf[label="pdflatex"]
+
+  md -> html[label="\""]
+  md -> other[label="\""]
+  { rank=same; md, rmarkdown}
+
+  rmarkdown[shape=none label="rmarkdown:\nknitr + pandoc"]
+}
