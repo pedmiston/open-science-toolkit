@@ -9,10 +9,8 @@
 - install the program "pandoc" (https://pandoc.org/installing.html)
 - install RStudio and the following R packages: tidyverse, rmarkdown, knitr
 
-## Outline
+## References
 
-1. plaintext
-2. markdown
-3. pandoc
-4. git
-5. github
+- [A manifesto for reproducible research](https://www.nature.com/articles/s41562-016-0021;)
+- [The plain person's guide to plain text social science](https://kieranhealy.org/files/papers/plain-person-text.pdf)
+
